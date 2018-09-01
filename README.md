@@ -40,7 +40,7 @@ git remote rm
 新建分支
 git checkout -b [branch-name]
 =
-git branch [branch-name]
+git branch [branch-name] [远程分支名] 不加远程分支 默认从master拉一个分支
 git checkout [branch-name]
 
 合并分支
