@@ -26,8 +26,11 @@ git remote -v
 git fetch [remote-name]
 
 推送数据到远程仓库
-git push [remote-name] [branch-name]
-git push origin master
+
+git push <远程主机名> <本地分支名>:<远程分支名>  git pull是 <远程主机名> <远程分支名>:<本地分支名>
+git push origin master:master
+
+
 
 git remote rename
 
