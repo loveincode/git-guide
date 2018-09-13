@@ -66,3 +66,4 @@ git branch --no-merged 查看尚未合并的工作
 
 删除远程分支
 git push origin :serverfix
+git push origin --delete <BranchName>
