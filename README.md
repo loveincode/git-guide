@@ -9,10 +9,16 @@ git reset HEAD file.md
 取消对文件的修改
 git checkout -- <file>
 git checkout -- file.md
+放弃所有的文件修改可以使用 git checkout .  命令。
+
+删除新增
+git clean -df  只删除所有untracked的文件，如果文件已经被tracked, 修改过的文件不会被回退。
 
 取消commit
-git reset [id] 
+git reset [id] 回到id时
 完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
+
+git reset --hard 只把tracked的文件revert到前一个版本，对于untracked的文件(比如编译的临时文件)都不会被删除。
 
 
 ### 远程仓库
@@ -66,3 +72,7 @@ git branch --no-merged 查看尚未合并的工作
 
 删除远程分支
 git push origin :serverfix
+
+刷新远程分支
+git remote update origin --prune，这里要注意下，如果你的remote branch不是在origin下，按你得把origin换成你的名字。
+
