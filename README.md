@@ -94,6 +94,17 @@ git branch --no-merged 查看尚未合并的工作
 git push origin :serverfix
 ```
 
+远程回退
+```
+查看需要回退的commitID
+git reflog 
+1
+接着回退版本:
+git reset --hard Obfafd
+紧接着强制推送到远程分支：
+git push -f
+```
+
 刷新远程分支
 ```
 git remote update origin --prune，这里要注意下，如果你的remote branch不是在origin下，按你得把origin换成你的名字。
