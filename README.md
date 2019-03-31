@@ -30,6 +30,11 @@ git reset [id] 回到id时
 git reset --hard 只把tracked的文件revert到前一个版本，对于untracked的文件(比如编译的临时文件)都不会被删除。
 ```
 
+#### 修改commit描述
+```
+git commit --amend
+```
+
 ### 远程仓库
 ```
 查看当前的远程库
@@ -97,7 +102,7 @@ git push origin :serverfix
 远程回退
 ```
 查看需要回退的commitID
-git reflog 
+git reflog
 1
 接着回退版本:
 git reset --hard Obfafd
