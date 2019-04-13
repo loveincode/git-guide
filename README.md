@@ -17,6 +17,17 @@ git checkout -- file.md
 git checkout . 放弃所有的文件修改
 ```
 
+### 重新应用缓存的stash https://www.cnblogs.com/tocy/p/git-stash-reference.html
+```
+git stash 会把所有未提交的修改（包括暂存的和非暂存的）都保存起来，用于后续恢复当前工作目录。比如下面的中间状态，通过git stash命令推送一个新的储藏，当前的工作目录就干净了。
+git stash apply 将缓存堆栈中的stash多次应用到工作目录中，但并不删除stash拷贝
+git stash pop 缓存堆栈中的第一个stash删除，并将对应修改应用到当前的工作目录下
+git stash list 查看现有stash
+git stash drop 移除stash
+git stash clear 删除所有缓存的stash。
+git stash show 查看指定stash的diff
+```
+
 #### 删除新增
 ```
 git clean -df  只删除所有untracked的文件，如果文件已经被tracked, 修改过的文件不会被回退。
