@@ -110,6 +110,7 @@ git branch --no-merged 查看尚未合并的工作
 git push origin :serverfix
 ```
 
+**常用**
 远程回退
 ```
 查看需要回退的commitID
@@ -119,6 +120,11 @@ git reflog
 git reset --hard Obfafd
 紧接着强制推送到远程分支：
 git push -f
+```
+
+指定cimmit id 提交到本分支
+```
+git cherry-pick 某个commit id   // 把某个commit id的提交合并到当前分支.
 ```
 
 刷新远程分支
