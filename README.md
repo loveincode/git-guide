@@ -167,3 +167,24 @@ git push origin --delete 1.0.0
 旧版本Git
 git push origin :refs/tags/1.0.0
 ```
+
+### mac终端下自动提示 自动补全
+```
+1. curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+2. vi ~/.bash_profile
+3. 追加
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+function git_branch {
+  branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
+  if [ "${branch}" != "" ];then
+      if [ "${branch}" = "(no branch)" ];then
+          branch="(`git rev-parse --short HEAD`...)"
+      fi
+      echo " ($branch)"
+  fi
+}
+export PS1='\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ '
+4. source ~/.bash_profile
+```
