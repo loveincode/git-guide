@@ -197,3 +197,16 @@ git config user.email
 #### 修改
 git config --global user.name  “用户名”
 git config --global user.email   “邮箱”
+
+
+### 版本号规则
+特性分支
+feature
+
+feature_YYYYMMDD_功能名
+
+发布分支
+release
+
+### 拉去指定commit
+git cherry-pick commit-id  (github 上的短号)
